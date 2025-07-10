@@ -12,7 +12,7 @@ struct LoadingView: View {
         VStack {
             Image("otomoto_logo")
                 .resizable()
-                .frame(width: 200, height: 80)
+                .frame(width: 270, height: 80)
                 //.padding()
             ProgressView("Ładowanie...")
                 .font(.title3)
