@@ -10,12 +10,14 @@ import SwiftUI
 struct LoadingView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Image("otomoto_logo")
+                .resizable()
+                .frame(width: 200, height: 80)
+                //.padding()
+            ProgressView("Ładowanie...")
+                .font(.title3)
+                .bold()
         }
-        .padding()
     }
 }
 
