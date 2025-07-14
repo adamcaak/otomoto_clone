@@ -13,7 +13,6 @@ struct NoticeView: View {
             Image("otomoto_logo")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                //.padding(.horizontal, 32)
                 .frame(width: 50, height: 50)
         }
         Form {
