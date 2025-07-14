@@ -16,7 +16,7 @@ struct MainView: View {
                 }
             FavoriteView()
                 .tabItem {
-                    Label("Ulubione", systemImage: "star")
+                    Label("Ulubione", systemImage: "heart")
                 }
             AddNewView()
                 .tabItem {
