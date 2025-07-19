@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct NoticeView: View {
+    @State private var selected: String = "Wybierz"
+    
     var carName: [String] = ["Audi","BMW", "Mercedes", "Volvo", "Porsche", "Skoda", "Opel", "Nissan", "Mazda", "Toyota"]
-    @State private var selectedCar: String = "Wybierz"
+    var carModel: [String] = ["A4", "A6", "A8", "X5", "X6", "Octavia", "Corsa", "Altima", "3", "Rav4"]
     
     var body: some View {
         VStack {
@@ -19,11 +21,17 @@ struct NoticeView: View {
                 .frame(width: 50, height: 50)
         }
         Form {
-            Picker("Wybierz marke", selection: $selectedCar) {
+            Picker("Wybierz marke", selection: $selected) {
                 ForEach(carName, id: \.self) {
                     Text($0)
                 }
             }
+            Picker("Wybierz model", selection: $selected) {
+                ForEach(carModel, id: \.self) {
+                    Text($0)
+                }
+            }
+            
         }
     }
 }
