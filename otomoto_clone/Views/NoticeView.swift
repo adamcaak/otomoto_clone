@@ -20,18 +20,22 @@ struct NoticeView: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 50, height: 50)
         }
-        Form {
-            Picker("Wybierz marke", selection: $selected) {
-                ForEach(carName, id: \.self) {
-                    Text($0)
+        VStack {
+            Form {
+                Picker("Wybierz marke", selection: $selected) {
+                    ForEach(carName, id: \.self) {
+                        Text($0)
+                    }
+                }
+                Picker("Wybierz model", selection: $selected) {
+                    ForEach(carModel, id: \.self) {
+                        Text($0)
+                    }
                 }
             }
-            Picker("Wybierz model", selection: $selected) {
-                ForEach(carModel, id: \.self) {
-                    Text($0)
-                }
+            Button("Szukaj samochodu:") {
+                
             }
-            
         }
     }
 }
