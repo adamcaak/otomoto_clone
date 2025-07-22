@@ -11,7 +11,7 @@ import SwiftUI
 struct otomoto_cloneApp: App {
     var body: some Scene {
         WindowGroup {
-            LoadingView()
+            MainView()
         }
     }
 }
